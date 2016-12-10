@@ -49,6 +49,7 @@ signal contador_tiempo16: INTEGER:= 0;
 signal contador_tiempo17: INTEGER:= 0;
 signal contador_tiempo18: INTEGER:= 0;
 signal contador_tiempo19: INTEGER:= 0;
+signal contador_tiempo20: INTEGER:= 0;
 signal contador_espera: INTEGER:= 0;
 signal contador_espera2: INTEGER:= 0;
 signal contador_espera3: INTEGER:= 0;
@@ -131,7 +132,7 @@ case STATE is
                end if;
            end if;
 	
-	-- segundo turno  FALTA PONER BIEN LOS CONTADORES CORRESPONDIENTES
+	-- segundo turno
 
 	when s2 =>  --Se enciende primer led
                  Led <= arsig1;
@@ -159,7 +160,7 @@ case STATE is
                if(contador_tiempo5 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
                if(Botones /= "0000")then
                    if(Botones = arsig1)then     
-                       STATE <= s5;  --Si hacierta el boton dentro del tiempo pasa
+                       STATE <= s5;  --Si acierta el boton dentro del tiempo pasa
                        end if;
                    if(Botones /= arsig1)then
                        STATE <= perder;  --Si falla el boton despues del tiempo pierde

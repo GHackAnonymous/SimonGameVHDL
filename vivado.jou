@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sat Dec 10 11:10:13 2016
+# Process ID: 8776
+# Current directory: C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12884 C:\Users\Red_Drake\Desktop\LFSRConTodosLosTurnos\LFSR.xpr
+# Log file: C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/vivado.log
+# Journal file: C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+run 70 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+run 70 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+run 70 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+run 70 ms
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+run 70 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+run 70 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+run 70 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+run 70 ms
+save_wave_config {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/Testbench_Ganar.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/Testbench_Ganar.wcfg
+set_property xsim.view {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/Testbench_Ganar.wcfg} [get_filesets sim_1]
+close_sim

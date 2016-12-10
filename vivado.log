@@ -1,0 +1,612 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sat Dec 10 11:10:13 2016
+# Process ID: 8776
+# Current directory: C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12884 C:\Users\Red_Drake\Desktop\LFSRConTodosLosTurnos\LFSR.xpr
+# Log file: C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/vivado.log
+# Journal file: C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.xpr
+INFO: [Project 1-313] Project file moved from 'D:/vivadoWS/LFSR' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj Testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/LFSR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LFSR
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/Main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a876c74cf5354aee8579c2691176d6f1 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.LFSR [lfsr_default]
+Compiling architecture behavioral of entity xil_defaultlib.Main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Dec 10 11:13:07 2016...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -view {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 820.824 ; gain = 46.398
+run 70 ms
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 820.824 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj Testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/LFSR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LFSR
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/Main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a876c74cf5354aee8579c2691176d6f1 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.LFSR [lfsr_default]
+Compiling architecture behavioral of entity xil_defaultlib.Main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Dec 10 11:24:03 2016...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 823.680 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -view {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 823.680 ; gain = 0.000
+run 70 ms
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 823.680 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj Testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/LFSR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LFSR
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/Main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a876c74cf5354aee8579c2691176d6f1 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.LFSR [lfsr_default]
+Compiling architecture behavioral of entity xil_defaultlib.Main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Dec 10 11:26:37 2016...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 823.680 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -view {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 823.680 ; gain = 0.000
+run 70 ms
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 823.680 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj Testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/LFSR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LFSR
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/Main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a876c74cf5354aee8579c2691176d6f1 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.LFSR [lfsr_default]
+Compiling architecture behavioral of entity xil_defaultlib.Main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Dec 10 11:33:04 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 823.680 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -view {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 836.293 ; gain = 12.613
+run 70 ms
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 836.293 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj Testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/LFSR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LFSR
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/Main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Testbench
+ERROR: [VRFC 10-1412] syntax error near wait [C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd:100]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd:8]
+INFO: [VRFC 10-240] VHDL file C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj Testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/LFSR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LFSR
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/Main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a876c74cf5354aee8579c2691176d6f1 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.LFSR [lfsr_default]
+Compiling architecture behavioral of entity xil_defaultlib.Main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Dec 10 11:47:34 2016...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -view {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 836.293 ; gain = 0.000
+run 70 ms
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 836.293 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj Testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/LFSR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LFSR
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/Main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a876c74cf5354aee8579c2691176d6f1 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.LFSR [lfsr_default]
+Compiling architecture behavioral of entity xil_defaultlib.Main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Dec 10 11:49:41 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 836.762 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -view {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 836.762 ; gain = 0.000
+run 70 ms
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 836.762 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj Testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/LFSR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LFSR
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/Main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a876c74cf5354aee8579c2691176d6f1 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.LFSR [lfsr_default]
+Compiling architecture behavioral of entity xil_defaultlib.Main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Dec 10 11:50:39 2016...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 836.762 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -view {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 836.762 ; gain = 0.000
+run 70 ms
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 838.586 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'Testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj Testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/LFSR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LFSR
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sources_1/new/Main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.srcs/sim_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a876c74cf5354aee8579c2691176d6f1 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Testbench_behav xil_defaultlib.Testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.LFSR [lfsr_default]
+Compiling architecture behavioral of entity xil_defaultlib.Main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot Testbench_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Dec 10 11:51:50 2016...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Testbench_behav -key {Behavioral:sim_1:Functional:Testbench} -tclbatch {Testbench.tcl} -view {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg
+source Testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 838.586 ; gain = 0.000
+run 70 ms
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 840.879 ; gain = 0.000
+save_wave_config {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/Testbench_Ganar.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/Testbench_Ganar.wcfg
+set_property xsim.view {C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/TestbenchPrueba1.wcfg C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/Testbench_Ganar.wcfg} [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 10 11:53:55 2016...
