@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1481317339">
-  <File Type="PA-TCL" Name="Main.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Main_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="Main.tcl"/>
   <File Type="RDS-RDS" Name="Main.vds"/>
   <File Type="RDS-UTIL" Name="Main_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Main_utilization_synth.pb"/>
@@ -32,7 +32,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/XDC/Basys3_Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="D:/vivadoWS/Basys3-master/Basys3-master/Resources/XDC/Basys3_Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Basys3-master/Basys3-master/Resources/XDC/Basys3_Master.xdc"/>
         <Attr Name="ImportTime" Val="1470138440"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

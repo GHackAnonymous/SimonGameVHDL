@@ -2,12 +2,12 @@
 # Webtalk v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Sat Dec 10 11:53:52 2016
-# Process ID: 12008
-# Current directory: C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav
-# Command line: wbtcv.exe -mode batch -source C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/webtalk.log
-# Journal file: C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav\webtalk.jou
+# Start of session at: Fri Dec 09 23:07:01 2016
+# Process ID: 11648
+# Current directory: D:/vivadoWS/LFSR/LFSR.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source D:/vivadoWS/LFSR/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/vivadoWS/LFSR/LFSR.sim/sim_1/behav/webtalk.log
+# Journal file: D:/vivadoWS/LFSR/LFSR.sim/sim_1/behav\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Red_Drake/Desktop/LFSRConTodosLosTurnos/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Sat Dec 10 11:53:53 2016...
+source D:/vivadoWS/LFSR/LFSR.sim/sim_1/behav/xsim.dir/Testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec 09 23:07:01 2016...
