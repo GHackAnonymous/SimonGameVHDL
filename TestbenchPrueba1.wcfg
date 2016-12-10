@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="51041940000000fs"></ZoomStartTime>
+      <ZoomEndTime time="51051600000001fs"></ZoomEndTime>
+      <Cursor1Time time="51050020000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/Testbench/sigBotones" type="array">
+      <obj_property name="ElementShortName">sigBotones[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sigBotones[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/sigLed" type="array">
+      <obj_property name="ElementShortName">sigLed[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sigLed[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/sigswitch" type="logic">
+      <obj_property name="ElementShortName">sigswitch</obj_property>
+      <obj_property name="ObjectShortName">sigswitch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/sigDisplay" type="array">
+      <obj_property name="ElementShortName">sigDisplay[6:0]</obj_property>
+      <obj_property name="ObjectShortName">sigDisplay[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/sig1" type="array">
+      <obj_property name="ElementShortName">sig1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sig1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/sig2" type="array">
+      <obj_property name="ElementShortName">sig2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sig2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/sig3" type="array">
+      <obj_property name="ElementShortName">sig3[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sig3[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/sig4" type="array">
+      <obj_property name="ElementShortName">sig4[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sig4[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/STATE" type="other">
+      <obj_property name="ElementShortName">STATE</obj_property>
+      <obj_property name="ObjectShortName">STATE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/MAX" type="other">
+      <obj_property name="ElementShortName">MAX</obj_property>
+      <obj_property name="ObjectShortName">MAX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/contador_comienzo" type="other">
+      <obj_property name="ElementShortName">contador_comienzo</obj_property>
+      <obj_property name="ObjectShortName">contador_comienzo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/arsig1" type="array">
+      <obj_property name="ElementShortName">arsig1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">arsig1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/arsig2" type="array">
+      <obj_property name="ElementShortName">arsig2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">arsig2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/arsig3" type="array">
+      <obj_property name="ElementShortName">arsig3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">arsig3[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/arsig4" type="array">
+      <obj_property name="ElementShortName">arsig4[3:0]</obj_property>
+      <obj_property name="ObjectShortName">arsig4[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/Led" type="array">
+      <obj_property name="ElementShortName">Led[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Led[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Testbench/UUT/contador_espera5" type="other">
+      <obj_property name="ElementShortName">contador_espera5</obj_property>
+      <obj_property name="ObjectShortName">contador_espera5</obj_property>
+   </wvobject>
+</wave_config>

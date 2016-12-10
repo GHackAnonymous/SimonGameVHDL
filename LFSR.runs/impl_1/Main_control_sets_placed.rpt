@@ -1,0 +1,73 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Fri Dec 09 22:03:27 2016
+| Host         : DESKTOP-OF4GKCQ running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
+| Design       : Main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    18 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             510 |          157 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+---------------+------------------+------------------+----------------+
+|            Clock Signal            | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
++------------------------------------+---------------+------------------+------------------+----------------+
+|  Display_reg[6]_i_1_n_14           |               |                  |                1 |              2 |
+|  Led_reg[3]_i_2_n_14               |               |                  |                4 |              4 |
+|  STATE_reg[4]_i_2_n_14             |               |                  |                3 |              5 |
+|  sig1_reg[0]_i_1_n_14              |               |                  |                4 |              6 |
+|  clock_IBUF_BUFG                   |               |                  |                4 |             13 |
+|  contador_espera5_reg[31]_i_2_n_14 |               |                  |                9 |             32 |
+|  contador_espera6_reg[31]_i_2_n_14 |               |                  |                9 |             32 |
+|  contador_espera7_reg[31]_i_2_n_14 |               |                  |                9 |             32 |
+|  contador_tiempo_reg[31]_i_2_n_14  |               |                  |                9 |             32 |
+|  n_0_7_BUFG                        |               |                  |                9 |             32 |
+|  n_10_921_BUFG                     |               |                  |                9 |             32 |
+|  n_11_39_BUFG                      |               |                  |                9 |             32 |
+|  n_12_29_BUFG                      |               |                  |                9 |             32 |
+|  n_13_28_BUFG                      |               |                  |                9 |             32 |
+|  n_1_4_BUFG                        |               |                  |               15 |             32 |
+|  n_2_11_BUFG                       |               |                  |                9 |             32 |
+|  n_3_6_BUFG                        |               |                  |                9 |             32 |
+|  n_4_16_BUFG                       |               |                  |                9 |             32 |
+|  n_5_5_BUFG                        |               |                  |                9 |             32 |
+|  n_6_40_BUFG                       |               |                  |                9 |             32 |
++------------------------------------+---------------+------------------+------------------+----------------+
+
+
