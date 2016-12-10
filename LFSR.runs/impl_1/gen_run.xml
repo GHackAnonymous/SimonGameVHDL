@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1481317339">
+  <File Type="OPT-DCP" Name="Main_opt.dcp"/>
   <File Type="ROUTE-STATUS-PB" Name="Main_route_status.pb"/>
   <File Type="PA-TCL" Name="Main.tcl"/>
-  <File Type="OPT-DCP" Name="Main_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="Main_timing_summary_init.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="Main_methodology_drc_opted.rpt"/>
   <File Type="RDI-RDI" Name="Main.vdi"/>
   <File Type="PWROPT-DRC" Name="Main_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Main_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Main_timing_summary_init.rpt"/>
   <File Type="OPT-DRC" Name="Main_drc_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="Main_pwropt.dcp"/>
   <File Type="OPT-HWDEF" Name="Main.hwdef"/>
@@ -31,8 +31,8 @@
   <File Type="ROUTE-DRC" Name="Main_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Main_drc_routed.pb"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="Main_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Main_methodology_drc_routed.pb"/>
   <File Type="BG-BIT" Name="Main.bit"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Main_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="Main_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="Main_power_summary_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="Main_power_routed.rpx"/>
@@ -81,7 +81,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/XDC/Basys3_Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="D:/vivadoWS/Basys3-master/Basys3-master/Resources/XDC/Basys3_Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Basys3-master/Basys3-master/Resources/XDC/Basys3_Master.xdc"/>
         <Attr Name="ImportTime" Val="1470138440"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

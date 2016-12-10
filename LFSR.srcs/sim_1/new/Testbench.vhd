@@ -87,21 +87,27 @@ end process;
 process
 begin
 sigBotones <= "0000"; --Antes de empezar
-wait for 51ms;
+wait for 9000ms;
 sigBotones <= "0100";  --Primer turno y segundo turno comienzo
-wait for 151000 ns;
-sigBotones <= "1000";   --Segundo turno led 2
-wait for 299000ns;
-sigBotones <= "0100";   --Tercer turno comienzo
-wait for 20000ns;
-sigBotones <= "1000";  --Tercer turno led 2 y 3
-wait for 430001 ns;
+wait for 5000ms;
+sigBotones <= "0100";   --Segundo turno led 2
+wait for 1000ms;
+sigBotones <= "1000";   --Tercer turno comienzo
+wait for 7000ms;
 sigBotones <= "0100";
-wait for 20000ns;
+wait for 1000ms;
 sigBotones <= "1000";
-wait for 100000ns;
+wait for 1000ms;
+sigBotones <= "1000";
+wait for 9000ms;
 sigBotones <= "0100";
-wait;       
+wait for 1000ms;
+sigBotones <= "1000";
+wait for 1000ms;
+sigBotones <= "1000";
+wait for 1000ms;
+sigBotones <= "0100";
+wait;
 end process;
 
 end Behavioral;
