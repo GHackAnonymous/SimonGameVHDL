@@ -14,3 +14,17 @@ Pantallazo de la simulacion del juego al estado perder
 Pantallazo de la simulacion del juego al estado ganar
 
 ![Screenshot](imagenes/Simu_ganar.jpg)
+
+# Fotos del juego en ejecución el la placa Basys 3
+
+Foto de una partida
+
+![Screenshot](imagenes/En-el-Juego.jpg)
+
+Foto de la partida ganada
+
+![Screenshot](imagenes/Placa-Win.jpg)
+
+Foto de la partida perdida
+
+![Screenshot](imagenes/Placa_Lose.jpg)
