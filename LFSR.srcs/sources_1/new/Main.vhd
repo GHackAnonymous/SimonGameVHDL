@@ -7,6 +7,7 @@ entity Main is
     Port ( 
         Led: out STD_LOGIC_VECTOR(3 downto 0);
         Display: out STD_LOGIC_VECTOR(6 downto 0);
+        Anode: out STD_LOGIC_VECTOR(3 downto 0);
         Botones: in STD_LOGIC_VECTOR(3 downto 0);
         switch: in STD_LOGIC;
         clock: in STD_LOGIC);
@@ -62,16 +63,33 @@ signal contador_espera9: INTEGER:= 0;
 signal contador_espera10: INTEGER:= 0;
 signal contador_espera11: INTEGER:= 0;
 signal contador_espera12: INTEGER:= 0;
-CONSTANT MAX : INTEGER := 600000000;
-CONSTANT TIEMPO : INTEGER := 100000000;
+signal contador1: INTEGER:= 0;
+signal contador2: INTEGER:= 0;
+signal contador3: INTEGER:= 0;
+signal contador4: INTEGER:= 0;
 signal arsig1 : STD_LOGIC_VECTOR (3 downto 0);
 signal arsig2 : STD_LOGIC_VECTOR (3 downto 0);
 signal arsig3 : STD_LOGIC_VECTOR (3 downto 0);
 signal arsig4 : STD_LOGIC_VECTOR (3 downto 0);
-TYPE STATE_TYPE IS(s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, perder, ganar);
+SIGNAL VALORANODO: INTEGER := 0;
+SIGNAL VALORDISPLAY: INTEGER := 0;
+SIGNAL VALORANODO2: INTEGER := 0;
+SIGNAL VALORDISPLAY2: INTEGER := 0;
+
+CONSTANT MAX : INTEGER := 600000000;
+CONSTANT TIEMPO : INTEGER := 100000000;
+CONSTANT DISPLAYED: INTEGER := 4000;
+
+TYPE STATE_TYPE IS(s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11,
+ s12, s13, s14, s15, s16, s17, s18, s19, s20, perder, ganar);
 SIGNAL STATE: STATE_TYPE;
+SIGNAL ESTADOS: STATE_TYPE;
+
 type boolean is (false,true);
 signal valores: boolean := false;
+signal estado: boolean := false;
+signal ganado: boolean := false;
+signal perdido: boolean := false;
 
 
 begin
@@ -97,7 +115,7 @@ simon: process (clock)
 begin
 
 if(rising_edge(clock)) then
-
+if(estado = false) then
     if(contador_comienzo < MAX) then
         contador_comienzo <= contador_comienzo + 1;
         
@@ -107,7 +125,7 @@ if(rising_edge(clock)) then
     
     case STATE is
     
-        -- primer turno   FALTA PONER BIEN LOS CONTADORES CORRESPONDIENTES
+        --Primer turno
     
         when s0 =>  --Se enciende primer led
                      Led <= arsig1;
@@ -119,22 +137,23 @@ if(rising_edge(clock)) then
                      
      
          when s1 =>   --Interacción usuario primer led
-                   if(contador_tiempo2 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
+                   if(contador_tiempo2 <= MAX)then 
                    if(Botones /= "0000")then
                        if(Botones = arsig1)then     
-                           STATE <= s2;  --Si hacierta el boton dentro del tiempo pasa
+                           STATE <= s2;  
                        end if;
                        if(Botones /= arsig1)then
-                           STATE <= perder;  --Si falla el boton despues del tiempo pierde
+                           STATE <= perder;
                        end if;
                    end if;
                    contador_tiempo2 <= contador_tiempo2 + 1;
-                   if(contador_tiempo2 > MAX) then
-                         STATE <= perder;
-                   end if;
+                  
                end if;
+                if(contador_tiempo2 > MAX) then
+                   STATE <= perder;
+                end if;
         
-        -- segundo turno
+        -- Segundo turno
     
         when s2 =>  --Se enciende primer led
                      Led <= arsig1;
@@ -159,44 +178,44 @@ if(rising_edge(clock)) then
               end if;
     
          when s4 =>   --Interacción usuario primer led
-                   if(contador_tiempo5 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
+                   if(contador_tiempo5 <= MAX)then
                    if(Botones /= "0000")then
                        if(Botones = arsig1)then     
-                           STATE <= s5;  --Si acierta el boton dentro del tiempo pasa
+                           STATE <= s5;
                            end if;
                        if(Botones /= arsig1)then
-                           STATE <= perder;  --Si falla el boton despues del tiempo pierde
+                           STATE <= perder;
                            end if;
                    end if;
                    contador_tiempo5 <= contador_tiempo5 + 1;
-                   if(contador_tiempo5 > MAX) then
-                         STATE <= perder;
-                   end if;
+               end if;
+               if(contador_tiempo5 > MAX) then
+                     STATE <= perder;
                end if;
            when s5 =>   --Interacción usuario segundo led
                if(contador_espera2 < TIEMPO)then
                    contador_espera2 <= contador_espera2 + 1;
                end if;
                if(contador_espera2 >= TIEMPO)then
-                   if(contador_tiempo6 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
+                   if(contador_tiempo6 <= MAX)then
                           if(Botones /= "0000")then
                               if(Botones = arsig2)then     
-                                  STATE <= s6;  --Si hacierta el boton dentro del tiempo pasa
+                                  STATE <= s6;
                                   end if;
                               if(Botones /= arsig2)then
-                                  STATE <= perder;  --Si falla el boton despues del tiempo pierde
+                                  STATE <= perder;
                                   end if;
                          
                           end if;
                 contador_tiempo6 <= contador_tiempo6 + 1;
-                if(contador_tiempo6 > MAX) then
-                      STATE <= perder;
-                end if;
                     end if;
+               end if;
+               if(contador_tiempo6 > MAX) then
+                     STATE <= perder;
                end if;
     
         
-        -- tercer turno  FALTA POR PONER LOS CONTADORES CORRESPONDIENTES
+        -- Tercer turno
         
         when s6 =>  --Se enciende primer led
                      Led <= arsig1;
@@ -234,64 +253,64 @@ if(rising_edge(clock)) then
               end if;
      
          when s9 =>   --Interacción usuario primer led
-                   if(contador_tiempo10 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
+                   if(contador_tiempo10 <= MAX)then
                    if(Botones /= "0000")then
                        if(Botones = arsig1)then     
-                           STATE <= s10;  --Si hacierta el boton dentro del tiempo pasa
+                           STATE <= s10;
                            end if;
                        if(Botones /= arsig1)then
-                           STATE <= perder;  --Si falla el boton despues del tiempo pierde
+                           STATE <= perder;
                            end if;
                    end if;
                    contador_tiempo10 <= contador_tiempo10 + 1;
-                   if(contador_tiempo10 > MAX) then
-                         STATE <= perder;
-                   end if;
+               end if;
+               if(contador_tiempo10 > MAX) then
+                     STATE <= perder;
                end if;
            when s10 =>   --Interacción usuario segundo led
                if(contador_espera5 < TIEMPO)then
                    contador_espera5 <= contador_espera5 + 1;
                end if;
                if(contador_espera5 >= TIEMPO)then
-                   if(contador_tiempo11 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
+                   if(contador_tiempo11 <= MAX)then
                           if(Botones /= "0000")then
                               if(Botones = arsig2)then     
-                                  STATE <= s11;  --Si hacierta el boton dentro del tiempo pasa
+                                  STATE <= s11;
                                   end if;
                               if(Botones /= arsig2)then
-                                  STATE <= perder;  --Si falla el boton despues del tiempo pierde
+                                  STATE <= perder;
                                   end if;
                          
                           end if;
                 contador_tiempo11 <= contador_tiempo11 + 1;
-                if(contador_tiempo11 > MAX) then
-                      STATE <= perder;
-                end if;
                     end if;
+               end if;
+               if(contador_tiempo11 > MAX) then
+                     STATE <= perder;
                end if;
           when s11 =>   --Interacción usuario tercer led
                 if(contador_espera6 < TIEMPO)then
                     contador_espera6 <= contador_espera6 + 1;
                 end if;
                 if(contador_espera6 >= TIEMPO)then
-                    if(contador_tiempo12 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
+                    if(contador_tiempo12 <= MAX)then
                            if(Botones /= "0000")then
                                if(Botones = arsig3)then     
-                                   STATE <= s12;  --Si hacierta el boton dentro del tiempo pasa
+                                   STATE <= s12;
                                    end if;
                                if(Botones /= arsig3)then
-                                   STATE <= perder;  --Si falla el boton despues del tiempo pierde
+                                   STATE <= perder;
                                    end if;
                            end if;
                  contador_tiempo12 <= contador_tiempo12 + 1;
-                 if(contador_tiempo12 > MAX) then
-                       STATE <= perder;
-                 end if;
                        end if;
+                end if;
+                if(contador_tiempo12 > MAX) then
+                      STATE <= perder;
                 end if;
     
     
-        -- Cuarto turno Funcional
+        -- Cuarto turno
          when s12 =>  --Se enciende primer led
                      Led <= arsig1;
                      if(contador_tiempo13 >= TIEMPO)then
@@ -342,91 +361,183 @@ if(rising_edge(clock)) then
                    contador_tiempo16 <= contador_tiempo16 +1;
                end if;
          when s16 =>   --Interacción usuario primer led
-                   if(contador_tiempo17 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
+                   if(contador_tiempo17 <= MAX)then
                    if(Botones /= "0000")then
                        if(Botones = arsig1)then     
-                           STATE <= s17;  --Si hacierta el boton dentro del tiempo pasa
+                           STATE <= s17;
                            end if;
                        if(Botones /= arsig1)then
-                           STATE <= perder;  --Si falla el boton despues del tiempo pierde
+                           STATE <= perder;
                            end if;
                    end if;
                    contador_tiempo17 <= contador_tiempo17 + 1;
-                   if(contador_tiempo17 > MAX) then
-                         STATE <= perder;
-                   end if;
+               end if;
+               if(contador_tiempo17 > MAX) then
+                     STATE <= perder;
                end if;
            when s17 =>   --Interacción usuario segundo led
                if(contador_espera10 < TIEMPO)then
                    contador_espera10 <= contador_espera10 + 1;
                end if;
                if(contador_espera10 >= TIEMPO)then
-                   if(contador_tiempo18 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
+                   if(contador_tiempo18 <= MAX)then
                           if(Botones /= "0000")then
                               if(Botones = arsig2)then     
-                                  STATE <= s18;  --Si hacierta el boton dentro del tiempo pasa
+                                  STATE <= s18;
                                   end if;
                               if(Botones /= arsig2)then
-                                  STATE <= perder;  --Si falla el boton despues del tiempo pierde
+                                  STATE <= perder;
                                   end if;
                          
                           end if;
                 contador_tiempo18 <= contador_tiempo18 + 1;
-                if(contador_tiempo18 > MAX) then
-                      STATE <= perder;
-                end if;
                     end if;
+               end if;
+               if(contador_tiempo18 > MAX) then
+                     STATE <= perder;
                end if;
           when s18 =>   --Interacción usuario tercer led
                 if(contador_espera11 < TIEMPO)then
                     contador_espera11 <= contador_espera11 + 1;
                 end if;
                 if(contador_espera11 >= TIEMPO)then
-                    if(contador_tiempo19 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
+                    if(contador_tiempo19 <= MAX)then
                            if(Botones /= "0000")then
                                if(Botones = arsig3)then     
-                                   STATE <= s19;  --Si hacierta el boton dentro del tiempo pasa
+                                   STATE <= s19;
                                    end if;
                                if(Botones /= arsig3)then
-                                   STATE <= perder;  --Si falla el boton despues del tiempo pierde
+                                   STATE <= perder;
                                    end if;
                            end if;
                  contador_tiempo19 <= contador_tiempo19 + 1;
-                 if(contador_tiempo19 > MAX) then
-                       STATE <= perder;
-                 end if;
                        end if;
+                end if;
+                if(contador_tiempo19 > MAX) then
+                      STATE <= perder;
                 end if;
           when s19 =>   --Interacción usuario cuarto led
                   if(contador_espera12 < TIEMPO)then
                       contador_espera12 <= contador_espera12 + 1;
                   end if;
                   if(contador_espera12 >= TIEMPO)then
-                      if(contador_tiempo20 <= MAX)then   --Si estamos dentro del tiempo de pulsar boton
+                      if(contador_tiempo20 <= MAX)then
                              if(Botones /= "0000")then
                                  if(Botones = arsig4)then     
-                                     STATE <= ganar;  --Si hacierta el boton dentro del tiempo pasa
+                                     STATE <= ganar;
                                      end if;
                                  if(Botones /= arsig4)then
-                                     STATE <= perder;  --Si falla el boton despues del tiempo pierde
+                                     STATE <= perder;
                                      end if;
                                 end if;
                              contador_tiempo20 <= contador_tiempo20 + 1;
-                           if(contador_tiempo20 > MAX) then
-                                 STATE <= perder;
-                           end if;
                          end if;
                   end if; 
-        when ganar => Display <= "1111110";
-        when perder => Display <= "0111111";
-        when others => STATE <= s12;
+                  if(contador_tiempo20 > MAX) then
+                        STATE <= perder;
+                  end if;
+        when ganar =>
+             if(estado = false) then
+                ganado <= true;
+             end if;
+             estado <= true;
+        when perder =>
+        if(estado = false) then
+           perdido <= true;
+        end if;
+        estado <= true;
+        when others => STATE <= s0;
             
     end case;
     
     end if;
 end if;
+end if;
 end process;
 
+
+DisplayProcess: process (clock)
+
+begin
+if(rising_edge(clock)) then 
+    if(estado = true) then
+        case ESTADOS is
+            when s0 =>
+                if(ganado = true) then
+                     ESTADOS <= s2;
+                end if;
+                if(perdido = true)then
+                     ESTADOS <= s1;
+            end if;
+    
+            when s1 =>
+                  contador1 <= contador1 + 1;
+                  if (contador1 >= DISPLAYED) then
+                    contador1 <= 0;
+                    ESTADOS <= s3;
+                  end if;
+            when s2 =>
+                contador1 <= contador1 + 1;
+                if (contador1 >= DISPLAYED) then
+                  contador1 <= 0;
+                  ESTADOS <= s4;
+                end if;
+            when s3 =>
+                  contador2 <= contador2 + 1;
+                  if (contador2 >= DISPLAYED) then
+                    contador2 <= 0;
+                    ESTADOS <= s5;
+                  end if;
+            when s4 =>
+                contador2 <= contador2 + 1;
+                if (contador2 >= DISPLAYED) then
+                  contador2 <= 0;
+                  ESTADOS <= s6;
+                end if;
+            when s5 =>
+                   contador3 <= contador3 + 1;
+                   if (contador3 >= DISPLAYED) then
+                     contador3 <= 0;
+                     ESTADOS <= s7;
+                   end if;
+             when s6 =>
+                   contador3 <= contador3 + 1;
+                   if (contador3 >= DISPLAYED) then
+                     contador3 <= 0;
+                     ESTADOS <= s2;
+                   end if;
+            when s7 =>
+                  contador4 <= contador4 + 1;
+                  if (contador4 >= DISPLAYED) then
+                    contador4 <= 0;
+                    ESTADOS <= s1;
+                  end if;
+            when others => 
+                    ESTADOS <= s0;
+    end case;		
+end if;
+end if;
+end process;
+
+with ESTADOS select Anode<=
+    "0111" when s1,
+    "1011" when s2,
+    "1011" when s3,
+    "1101" when s4,
+    "1101" when s5,
+    "1110" when s6,
+    "1110" when s7,
+    "1111" when others;
+
+with ESTADOS select Display<=
+    "1000111" when s1,
+    "0000001" when s2,
+    "1000000" when s3,
+    "1111001" when s4,
+    "0010010" when s5,
+    "1001000" when s6,
+    "0000110" when s7,
+    "1111111" when others;
 
 with sig1 select arsig1 <=
     "1000" when "00",
@@ -448,4 +559,5 @@ with sig4 select arsig4 <=
     "0100" when "01",
     "0010" when "10",
     "0001" when others;
+
 end Behavioral;
